@@ -1,0 +1,40 @@
+seed: 42
+batch_size: 32
+learning_rate: 0.001
+epochs: 100
+patience: 5
+input_size: 224
+screen_width: 1440
+screen_height: 900
+data_path: /Users/ariana/CLionProjects/untitled/dataset
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 112, 112]           9,472
+       BatchNorm2d-2         [-1, 64, 112, 112]             128
+              ReLU-3         [-1, 64, 112, 112]               0
+         MaxPool2d-4           [-1, 64, 56, 56]               0
+            Conv2d-5          [-1, 128, 56, 56]          73,856
+       BatchNorm2d-6          [-1, 128, 56, 56]             256
+              ReLU-7          [-1, 128, 56, 56]               0
+         MaxPool2d-8          [-1, 128, 28, 28]               0
+            Conv2d-9          [-1, 256, 28, 28]         295,168
+      BatchNorm2d-10          [-1, 256, 28, 28]             512
+             ReLU-11          [-1, 256, 28, 28]               0
+        MaxPool2d-12          [-1, 256, 14, 14]               0
+AdaptiveAvgPool2d-13            [-1, 256, 1, 1]               0
+          Flatten-14                  [-1, 256]               0
+           Linear-15                  [-1, 512]         131,584
+             ReLU-16                  [-1, 512]               0
+           Linear-17                    [-1, 2]           1,026
+================================================================
+Total params: 512,002
+Trainable params: 512,002
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 34.85
+Params size (MB): 1.95
+Estimated Total Size (MB): 37.38
+----------------------------------------------------------------

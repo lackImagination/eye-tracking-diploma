@@ -1,0 +1,10 @@
+seed: 42
+batch_size: 32
+learning_rate: 0.0003
+epochs: 100
+patience: 20
+input_size: 224
+screen_width: 1440
+screen_height: 900
+data_path: /Users/ariana/CLionProjects/untitled/dataset
+save_dir: training_results_finetune
